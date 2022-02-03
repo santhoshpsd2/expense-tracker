@@ -28,7 +28,9 @@ let data = [
 let updateindex;
 
 function init(){
-    data =JSON.parse(localStorage.getItem('items'));
+    if(localStorage.getItem('items')){
+        data =JSON.parse(localStorage.getItem('items'));
+    }
     updatetrans();
 }
 
